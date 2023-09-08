@@ -13,6 +13,8 @@ Warehouses/workshop often has the risk of machine handler unknowlingly putting t
 Deep Learning is used to warn the machine handler if their hand/fingers are closer to shred machine. A camera is placed over the machine which is monitoring the hand of machine handler. There are 2 lines on machine, first line act as a warning and  </br>
 second line if crossed, machine will stop automatically inorder to prevent the injuries.
 
+The model is trained on SSD mobile net, the data was collected from a recording of 24 hours of workers working with the shredder. The data was then augmented and validated using Data augmentation techniques. The data was then annotated and trained using faster RCNN and Mobilenet SSD model, as Mobile net gave better results it was chosen for productionizing.The code is available in master branch of the repository.
+
 
 ## Tech Stack Used
 Python </br>
