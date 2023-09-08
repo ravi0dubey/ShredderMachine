@@ -19,16 +19,14 @@ The model is trained on SSD mobile net, the data was collected from a recording 
 ## Tech Stack Used
 Python </br>
 FastAPI </br>
-Yolov5 algorithms </br>
-Docker </br>
+mobilenet-ssd model </br>
 
+The **mobilenet-ssd model** is a Single-Shot multibox Detection (SSD) network intended to perform object detection. This model is implemented using the Caffe* framework.
 
-## Infrastructure Required.
-AWS S3 </br>
-AWS EC2 </br>
-AWS ECR </br>
-Git Actions </br>
-Terraform </br>
+![image](https://github.com/ravi0dubey/ShredderMachine/assets/38419795/824776e4-5506-4fbd-b363-72bca9a53204)
+
+## Accuracy
+![image](https://github.com/ravi0dubey/ShredderMachine/assets/38419795/69253758-a67e-46e6-b45e-9655616cc193)
 
 
 ## How to run  
