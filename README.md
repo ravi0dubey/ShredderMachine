@@ -7,6 +7,8 @@
 Shredder machine is a useful but dangerous tool which should be handled with care. Most warehouse/workshop uses shredder machine to shred different kind of waste product, ranging from paper, bottles to heavy equipment </br>
 Warehouses/workshop often has the risk of machine handler unknowlingly putting their hand closer to Machine which results in grave injuries.
 
+![img1](https://github.com/ravi0dubey/ShredderMachine/assets/38419795/8e3cbcbe-3a52-4ff2-8e2e-d6b3a4563c8b)
+
 
 ## Solution Proposed
 
@@ -30,8 +32,8 @@ The **mobilenet-ssd model** is a Single-Shot multibox Detection (SSD) network in
 
 
 ## How to run  
-1. conda create -n signLanguage python=3.7 -y  </br>
-2. conda activate signLanguage </br>
+1. conda create -n shredmachine python=3.7 -y  </br>
+2. conda activate shredmachine </br>
 3. pip install -r requirements.txt </br>
 4. python main.py </br>
 5. open in browser: http://localhost:8080/ </br>
