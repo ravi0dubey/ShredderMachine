@@ -40,6 +40,8 @@ The **mobilenet-ssd model** is a Single-Shot multibox Detection (SSD) network in
 ## Demo video of the project
 https://youtu.be/RktGCTXaF-g
 
+# Output 
+1. Number of time webcam was able the hand as well as the number of times hand crossed the warning line gets stored in result.xls
 
 ## How project was designed and build
 1. **hand_detection.py** file is created where we write statement so that signLanguage folder will behave as libraries </br>
