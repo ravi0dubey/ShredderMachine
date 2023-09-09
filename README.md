@@ -32,11 +32,8 @@ The **mobilenet-ssd model** is a Single-Shot multibox Detection (SSD) network in
 
 
 ## How to run  
-1. conda create -n shredmachine python=3.7 -y  </br>
-2. conda activate shredmachine </br>
+1. conda create -n shredmachineenv python=3.6 -y  </br>
+2. conda activate shredmachineenv </br>
 3. pip install -r requirements.txt </br>
-4. python main.py </br>
-5. open in browser: http://localhost:8080/ </br>
-6. To do the object detection for a static image upload the image and it will predict the sign language </br>
-7. To do the sign language prediction, live, change the url in the browser to : http://localhost:8080/train/live </br>
-6. To the train the model change the url in the browser to : http://localhost:8080/train </br>
+4. python hand_detection.py </br>
+
