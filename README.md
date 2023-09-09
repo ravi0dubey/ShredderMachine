@@ -39,3 +39,9 @@ The **mobilenet-ssd model** is a Single-Shot multibox Detection (SSD) network in
 
 ## Demo video of the project
 https://youtu.be/RktGCTXaF-g
+
+
+## How project was designed and build
+1. **hand_detection.py** file is created where we write statement so that signLanguage folder will behave as libraries </br>
+5. **Exception** and **Logger** module will handle exception and write log activities respectively</br>
+6. All common functionality like encode-decode image, reading/writing of yaml files are written in utils>main.py  </br>
