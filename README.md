@@ -24,6 +24,13 @@ mobilenet-ssd model </br>
 
 The **mobilenet-ssd model** is a Single-Shot multibox Detection (SSD) network intended to perform object detection. This model is implemented using the Caffe* framework.
 
+MobileNet is a CNN architecture model for Image Classification and Mobile Vision. It has very little computation power to run or apply transfer learning which makes it a perfect fit for Mobile devices, embedded systems, and computers without GPU or low computational efficiency without compromising significantly with the accuracy of the results. If we combine both the MobileNet architecture and the Single Shot Detector (SSD) framework, we arrive at a fast, efficient deep learning-based method to object detection. 
+The MobileNet SSD was first trained on the COCO dataset (Common Objects in Context).
+
+Hence Mobilenet-SSD model was used in this project for faster object detection.
+
+
+
 ![image](https://github.com/ravi0dubey/ShredderMachine/assets/38419795/824776e4-5506-4fbd-b363-72bca9a53204)
 
 ## Accuracy
@@ -43,6 +50,7 @@ https://youtu.be/RktGCTXaF-g
 1. Number of time webcam was able the hand as well as the number of times hand crossed the warning line gets stored in result.xls
 
 ## How project was designed and build
-1. **hand_detection.py** file is created where we write statement so that signLanguage folder will behave as libraries. **Detection threshold set to **0.8**** </br>
+1. **hand_detection.py**  -> file is created to detect maximum of **2** hands.**Safety line is set to 30%** from the orientation and **Danger line at 15%** from the orientation side </br>.
+   Hand Detection threshold set to **0.8** </br>
 5. **Exception** and **Logger** module will handle exception and write log activities respectively</br>
 6. All common functionality like encode-decode image, reading/writing of yaml files are written in utils>main.py  </br>
