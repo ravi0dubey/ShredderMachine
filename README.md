@@ -37,3 +37,5 @@ The **mobilenet-ssd model** is a Single-Shot multibox Detection (SSD) network in
 3. pip install -r requirements.txt </br>
 4. python hand_detection.py </br>
 
+## Demo video of the project
+https://youtu.be/RktGCTXaF-g
