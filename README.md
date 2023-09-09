@@ -20,7 +20,6 @@ The model is trained on SSD mobile net, the data was collected from a recording 
 
 ## Tech Stack Used
 Python </br>
-FastAPI </br>
 mobilenet-ssd model </br>
 
 The **mobilenet-ssd model** is a Single-Shot multibox Detection (SSD) network intended to perform object detection. This model is implemented using the Caffe* framework.
@@ -44,6 +43,6 @@ https://youtu.be/RktGCTXaF-g
 1. Number of time webcam was able the hand as well as the number of times hand crossed the warning line gets stored in result.xls
 
 ## How project was designed and build
-1. **hand_detection.py** file is created where we write statement so that signLanguage folder will behave as libraries </br>
+1. **hand_detection.py** file is created where we write statement so that signLanguage folder will behave as libraries. **Detection threshold set to **0.8**** </br>
 5. **Exception** and **Logger** module will handle exception and write log activities respectively</br>
 6. All common functionality like encode-decode image, reading/writing of yaml files are written in utils>main.py  </br>
