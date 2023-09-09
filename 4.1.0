@@ -1,0 +1,14 @@
+Collecting opencv-python
+  Downloading opencv-python-4.8.0.76.tar.gz (92.1 MB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+    Preparing wheel metadata: started
+    Preparing wheel metadata: finished with status 'done'
+Requirement already satisfied: numpy>=1.13.3 in c:\users\ravi0dubey\anaconda3\envs\shredmachineenv\lib\site-packages (from opencv-python) (1.16.0)
+Building wheels for collected packages: opencv-python
+  Building wheel for opencv-python (PEP 517): started
+  Building wheel for opencv-python (PEP 517): still running...
+  Building wheel for opencv-python (PEP 517): still running...
+  Building wheel for opencv-python (PEP 517): finished with status 'canceled'

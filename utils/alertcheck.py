@@ -33,6 +33,7 @@ def drawboxtosafeline(image_np,p1,p2,Line_Position2,Orientation):
 
          cv2.line(img=image_np, pt1=bounding_mid, pt2=(bounding_mid[0],Line_Position2), color=(255, 0, 0), thickness=1, lineType=8, shift=0)
 
+
          distance_from_line=bounding_mid[1]-Line_Position2
 
     elif(Orientation=="tb"):
@@ -93,7 +94,7 @@ def drawboxtosafeline(image_np,p1,p2,Line_Position2,Orientation):
 
 			 #sound = os.path.join()
              #
-             playsound(r"C:\Users\paulb\PycharmProjects\shreddermachine\utils\alert.wav")
+             playsound(r"D:\Study\Data Science\Deep Learning\Deep Learning Project\ShredderMachine\utils\alert.wav")
 
               
 

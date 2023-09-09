@@ -1,33 +1,31 @@
-import cv2
-import argparse
-import orien_lines
+import cv2  #imported for opencv
+import argparse #any argument passed during runtime
+import orien_lines # custom import from orien_lines.py which is used to create orientation lines 
 import datetime
 from imutils.video import VideoStream
 from utils import detector_utils as detector_utils
 import pandas as pd
 from datetime import date
-import xlrd
-from xlwt import Workbook
-from xlutils.copy import copy
+import xlrd # used to read data and format information from excel files
+from xlwt import Workbook # used for excel files
+from xlutils.copy import copy # used for copying cell contents from one cell to other
 import numpy as np
-from vidgear.gears import CamGear
+from vidgear.gears import CamGear # used for webcam
 
 lst1 = []
 lst2 = []
 ap = argparse.ArgumentParser()
-ap.add_argument('-d', '--display', dest='display', type=int,
-                default=1, help='Display the detected images using OpenCV. This reduces FPS')
+ap.add_argument('-d', '--display', dest='display', type=int,default=1, help='Display the detected images using OpenCV. This reduces FPS')
 args = vars(ap.parse_args())
 
 detection_graph, sess = detector_utils.load_inference_graph()
 
-
+# Function to store data of number of time it was able to detect the hand and number of times hand crossed the warning line
+# Count will be saved in result.xls file
 def save_data(no_of_time_hand_detected, no_of_time_hand_crossed):
     try:
         today = date.today()
         today = str(today)
-        # loc = (r'C:\Users\paul\Desktop\result.xls')
-
         rb = xlrd.open_workbook('result.xls')
         sheet = rb.sheet_by_index(0)
         sheet.cell_value(0, 0)
@@ -61,7 +59,6 @@ def save_data(no_of_time_hand_detected, no_of_time_hand_crossed):
 
         # add_sheet is used to create sheet. 
         sheet = wb.add_sheet('Sheet 1')
-
         sheet.write(0, 0, 'Sl.No')
         sheet.write(0, 1, 'Date')
         sheet.write(0, 2, 'Number of times hand detected')
@@ -71,7 +68,7 @@ def save_data(no_of_time_hand_detected, no_of_time_hand_crossed):
         sheet.write(1, 1, today)
         sheet.write(1, 2, no_of_time_hand_detected)
         sheet.write(1, 3, no_of_time_hand_crossed)
-
+        # save the count in result.xls
         wb.save('result.xls')
 
 
@@ -108,7 +105,7 @@ if __name__ == '__main__':
 
     im_height, im_width = (None, None)
     cv2.namedWindow('Detection', cv2.WINDOW_NORMAL)
-
+    
 
     def count_no_of_times(lst):
         x = y = cnt = 0
