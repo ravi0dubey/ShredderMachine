@@ -1,5 +1,4 @@
 # Utilities for object detector.
-
 import numpy as np
 import sys
 import tensorflow as tf
@@ -19,6 +18,7 @@ PATH_TO_CKPT = TRAINED_MODEL_DIR + '/ssd5_optimized_inference_graph.pb'
 # List of the strings that is used to add correct label for each box.
 PATH_TO_LABELS = TRAINED_MODEL_DIR + '/Glove_label_map.pbtxt'
 
+# 2 classes 1 for foreground and second for background
 NUM_CLASSES = 2
 # load label map using utils provided by tensorflow object detection api
 label_map = label_map_util.load_labelmap(PATH_TO_LABELS)
@@ -30,9 +30,8 @@ a = b = 0
 
 
 # Load a frozen infrerence graph into memory
+# It is used to load the tensorflow model into the memory
 def load_inference_graph():
-    # load frozen tensorflow model into memory
-
     print("> ====== Loading frozen graph into memory")
     detection_graph = tf.Graph()
     with detection_graph.as_default():
@@ -46,8 +45,8 @@ def load_inference_graph():
     return detection_graph, sess
 
 
-def draw_box_on_image(num_hands_detect, score_thresh, scores, boxes, classes, im_width, im_height, image_np,
-                      Line_Position2, Orientation):
+# This function is used to find the centre point of the object and then get the height and width of the object and then it draws the bounding box
+def draw_box_on_image(num_hands_detect, score_thresh, scores, boxes, classes, im_width, im_height, image_np,Line_Position2, Orientation):
     # Determined using a piece of paper of known length, code can be found in distance to camera
     focalLength = 875
     # The average width of a human hand (inches) http://www.theaveragebody.com/average_hand_size.php
