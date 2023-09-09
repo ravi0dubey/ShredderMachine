@@ -22,7 +22,7 @@ The model is trained on SSD mobile net, the data was collected from a recording 
 Python </br>
 mobilenet-ssd model </br>
 
-The **mobilenet-ssd model** is a Single-Shot multibox Detection (SSD) network intended to perform object detection. This model is implemented using the Caffe* framework.
+The **mobilenet-ssd model** is a Single-Shot multibox Detection (SSD) network intended to perform object detection. This model is implemented using the Caffe* framework. I am using custom trained model.
 
 MobileNet is a CNN architecture model for Image Classification and Mobile Vision. It has very little computation power to run or apply transfer learning which makes it a perfect fit for Mobile devices, embedded systems, and computers without GPU or low computational efficiency without compromising significantly with the accuracy of the results. If we combine both the MobileNet architecture and the Single Shot Detector (SSD) framework, we arrive at a fast, efficient deep learning-based method to object detection. 
 The MobileNet SSD was first trained on the COCO dataset (Common Objects in Context).
