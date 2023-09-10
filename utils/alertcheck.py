@@ -1,3 +1,6 @@
+#draw the 2 lines and if hand touches the safety lines then sound the alarm
+# It is created to detect maximum of **2** hands.**Safety line is set to 30%** from the orientation and **Danger line at 15%** from the orientation side.
+
 import cv2
 from playsound import playsound
 import pandas as pd

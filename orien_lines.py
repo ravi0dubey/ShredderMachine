@@ -2,7 +2,7 @@ import cv2
 
 # function to create the orientation lines in the video frame. Two lines gets created. Red line which is the alert line and the second line which is the danger line.
 # camera can be positioned in any direction and at any orientation we need to have capability to draw 2 lines at the top or at the bottom, also starting from left orgit  the right. 
-# Hence based on different orientation of the camera we create the 2 lines.
+# Hence based on different orientation of the camera we get the position of the 2 lines to be draw.
 
 
 def drawsafelines(image_np,Orientation,Line_Perc1,Line_Perc2):    

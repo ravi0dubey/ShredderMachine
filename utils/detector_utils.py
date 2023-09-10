@@ -1,5 +1,5 @@
 # Utilities for object detector.
-
+# Load the ssd model, load the live feed of video and check the distance of hand from the safey lines
 import numpy as np
 import sys
 import tensorflow as tf
