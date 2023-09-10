@@ -78,12 +78,13 @@ def save_data(no_of_time_hand_detected, no_of_time_hand_crossed):
         wb.save('result.xls')
 
 
+# Main function
 if __name__ == '__main__':
+    
     # Detection confidence threshold to draw bounding box
     score_thresh = 0.80
     
-    # below code is for machine camera feed. But since we are using webcam hence we have commented the code
-    # RTSP is real time streaming protocol.
+    # Below code is for machine camera feed. But since we are using webcam hence we have commented the code. RTSP is real time streaming protocol.
     #rtsp_url = "rtsp://admin:ravi@123@192.168.0.2/H264?ch=1&subtype=0" # 
     #vs = VideoStream(rtsp_url).start()
     #vs = cv2.VideoCapture('rtsp://admin:ravi@123@192.168.0.2/H264?ch=1&subtype=0')
@@ -162,21 +163,20 @@ if __name__ == '__main__':
             num_frames += 1
             elapsed_time = (datetime.datetime.now() - start_time).total_seconds()
             fps = num_frames / elapsed_time
-
-            if args['display']:
-                # Display FPS on frame
+          
+          # It writes and Display FPS text on top left of the video and what is the fps value
+            if args['display']:           
                 detector_utils.draw_text_on_image("FPS : " + str("{0:.2f}".format(fps)), frame)
                 cv2.imshow('Detection', cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
+                # we can close the window by pressing function key or writing q and stopping the streaming mechanism
                 if cv2.waitKey(25) & 0xFF == ord('q'):
                     cv2.destroyAllWindows()
                     vs.stop()
                     break
 
         no_of_time_hand_detected = count_no_of_times(lst2)
-        # no_of_time_hand_detected=b
-        no_of_time_hand_crossed = count_no_of_times(lst1)
-        # print(no_of_time_hand_detected)
-        # print(no_of_time_hand_crossed)
+        no_of_time_hand_crossed = count_no_of_times(lst1)   
+        # calling save_data function to store the count in excel    
         save_data(no_of_time_hand_detected, no_of_time_hand_crossed)
         print("Average FPS: ", str("{0:.2f}".format(fps)))
 
