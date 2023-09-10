@@ -5,7 +5,7 @@ import socket
 
 TCP_IP = '192.168.0.22'
 TCP_PORT = 8001
-#crossed=0
+
 
 def drawboxtosafeline(image_np,p1,p2,Line_Position2,Orientation):
     #global crossed 
