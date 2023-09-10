@@ -50,7 +50,12 @@ https://youtu.be/RktGCTXaF-g
 1. Number of time webcam was able the hand as well as the number of times hand crossed the warning line gets stored in result.xls
 
 ## How project was designed and build
-1. **hand_detection.py**  -> file is created to detect maximum of **2** hands.**Safety line is set to 30%** from the orientation and **Danger line at 15%** from the orientation side </br>.
+1. **hand_detection.py**  -> Main python file which gets called. It is created to detect maximum of **2** hands.**Safety line is set to 30%** from the orientation and **Danger line at 15%** from the orientation side </br>.
    Hand Detection threshold set to **0.8** </br>
-5. **Exception** and **Logger** module will handle exception and write log activities respectively</br>
-6. All common functionality like encode-decode image, reading/writing of yaml files are written in utils>main.py  </br>
+   It calls orien_lines.py to get position of the safety and dange line on the live video. </br>
+   It calls detector_utils.py to load the mobilenet_ssd model and then load the livestream video <.br?
+2. **orien_lines.py** ->function to check the orientation lines in the video frame. Two lines gets created on the video stream. Red line which is the alert line and the second line which is the danger line. </br>
+  Camera can be positioned in any direction and at any orientation we need to have capability to draw 2 lines at the top or at the bottom, also starting from left orgit  the right . </br>
+  Hence based on different orientation of the camera we get the position of the 2 lines to be draw. </br>
+4. **detector_utils.py** -> Load the ssd model, load the live feed of video and check the distance of hand from the safey lines
+5. **alertcheck.py** -> draw the 2 lines and if hand touches the safety lines then sound the alarm
